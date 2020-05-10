@@ -15,8 +15,8 @@
                                 <input type="text" class="form-control"  name="name" id="exampleInputEmail1" placeholder="Brand name">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Descripsion</label>
-                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="descripsion" id="exampleInputPassword1" placeholder="Descripsion product catalog"></textarea>
+                                <label for="exampleInputPassword1">Description</label>
+                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="description" id="exampleInputPassword1" placeholder="Description product catalog"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Status</label>

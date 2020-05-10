@@ -3,7 +3,7 @@
     <div class="table-agile-info">
         <div class="panel panel-default">
             <div class="panel-heading">
-                List the product catalog
+                List the product
             </div>
             <div class="row w3-res-tb">
                 <div class="col-sm-5 m-b-xs">
@@ -42,24 +42,24 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @if(isset($categories))
-                        @foreach($categories as $category)
+                    @if(isset($products))
+                        @foreach($products as $product)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$category->name}}</td>
-                                <td>{{$category->description}}</td>
+                                <td>{{$product->name}}</td>
+                                <td>{{$product->description}}</td>
                                 <td>
-                                    @if($category->c_status == \App\Models\Category::STATUS_SHOWS)
-                                        <a href="{{route('category.product.status',$category->id )}}" class="label {{$category->getStatus($category->status)['class']}}">{{$category->getStatus($category->status)['name']}}</a>
+                                    @if($product->c_status == \App\Models\Product::STATUS_SHOWS)
+                                        <a href="{{route('product.status',$product->id )}}" class="label {{$product->getStatus($product->status)['class']}}">{{$product->getStatus($product->status)['name']}}</a>
                                     @else
-                                        <a href="{{route('category.product.status',$category->id )}}" class="label {{$category->getStatus($category->status)['class']}}">{{$category->getStatus($category->status)['name']}}</a>
+                                        <a href="{{route('product.status',$product->id )}}" class="label {{$product->getStatus($product->status)['class']}}">{{$product->getStatus($product->status)['name']}}</a>
                                     @endif
                                 </td>
                                 <td class="align-middle">
-                                    <a href="{{route('category.product.edit', $category->id)}}" class="btn btn-sm btn-outline-info" ui-toggle-class="">
+                                    <a href="{{route('product.edit', $product->id)}}" class="btn btn-sm btn-outline-info" ui-toggle-class="">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="{{ route('category.product.destroy', $category->id) }}"
+                                    <a href="{{route('product.destroy', $product->id)}}"
                                        class="text-danger"
                                        onclick="return confirm('Bạn chắc chắn muốn xóa?')"><i class="fa fa-times"></i></a>
                                 </td>

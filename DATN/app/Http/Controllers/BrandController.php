@@ -22,7 +22,7 @@ class BrandController extends Controller
 
         Brand::create([
             'name'            => $request->name,
-            'descripsion'     => $request->descripsion,
+            'description'     => $request->description,
             'status'          =>$request->status,
         ]);
         Session::put('message','Add successful brands');
@@ -39,7 +39,7 @@ class BrandController extends Controller
 //            'descripsion' => $request->descripsion,
 //        ]);
         $brand->name     = $request->input('name');
-        $brand->descripsion     = $request->input('descripsion');
+        $brand->description     = $request->input('description');
         $brand->save();
         return redirect()->Route('brand.list')->with('success', 'Update brand successfully');
     }

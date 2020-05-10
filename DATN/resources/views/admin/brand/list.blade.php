@@ -36,7 +36,7 @@
                             </label>
                         </th>
                         <th>Name</th>
-                        <th>Descripsion</th>
+                        <th>Description</th>
                         <th>Status</th>
                         <th style="width:30px;"></th>
                     </tr>
@@ -47,7 +47,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$brand->name}}</td>
-                                <td>{{$brand->descripsion}}</td>
+                                <td>{{$brand->description}}</td>
                                 <td>
                                     @if($brand->c_status == \App\Models\Brand::STATUS_SHOWS)
                                         <a href="{{route('brand.status',$brand->id )}}" class="label {{$brand->getStatus($brand->status)['class']}}">{{$brand->getStatus($brand->status)['name']}}</a>

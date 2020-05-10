@@ -43,4 +43,13 @@ Route::prefix('admin')->group(function() {
         Route::get('/delete/{id}', 'BrandController@destroy')->name('brand.destroy');
         Route::get('/status/{id}', 'BrandController@status')->name('brand.status');
     });
+    Route::prefix('product')->group(function() {
+        Route::get('/', 'ProductController@index')->name('product.list');
+        Route::get('/create', 'ProductController@create')->name('product.create');
+        Route::post('/store', 'ProductController@store')->name('product.store');
+        Route::get('/edit/{id}', 'ProductController@edit')->name('product.edit');
+        Route::post('/update/{id}', 'ProductController@update')->name('product.update');
+        Route::get('/delete/{id}', 'ProductController@destroy')->name('product.destroy');
+        Route::get('/status/{id}', 'ProductController@status')->name('product.status');
+    });
 });

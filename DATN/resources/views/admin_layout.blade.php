@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-book"></i>
-                            <span>Product portfolio</span>
+                            <span>Category</span>
                         </a>
                         <ul class="sub">
                             <li><a href="{{route('category.product.create')}}">Add product catalog</a></li>
@@ -114,11 +114,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-book"></i>
-                            <span>Product portfolio</span>
+                            <span>Brand</span>
                         </a>
                         <ul class="sub">
                             <li><a href="{{route('brand.create')}}">Add brand</a></li>
                             <li><a href="{{route('brand.list')}}">List brand</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span>Product</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="{{route('product.create')}}">Add product</a></li>
+                            <li><a href="{{route('product.list')}}">List product</a></li>
                         </ul>
                     </li>
                 </ul>

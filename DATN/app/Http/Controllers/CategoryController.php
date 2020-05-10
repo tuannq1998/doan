@@ -23,7 +23,7 @@ class CategoryController extends Controller
 
         Category::create([
             'name'            => $request->name,
-            'descripsion'     => $request->descripsion,
+            'description'     => $request->description,
             'status'          =>$request->status,
         ]);
         Session::put('message','Add successful product categories');
@@ -35,12 +35,8 @@ class CategoryController extends Controller
     }
     public function update(Request $request, $id){
         $category = Category::findOrFail($id);
-//        $category->update([
-//            'name' => $request->name,
-//            'descripsion' => $request->descripsion,
-//        ]);
         $category->name     = $request->input('name');
-        $category->descripsion     = $request->input('descripsion');
+        $category->description     = $request->input('description');
         $category->save();
         return redirect()->Route('category.product.list')->with('success', 'Update category product successfully');
     }
@@ -53,7 +49,7 @@ class CategoryController extends Controller
     public function status($id)
     {
         $category = Category::find($id);
-        $category->status = ! $category->status;
+        $category->status = !$category->status;
         $category->save();
         return redirect()->back();
     }

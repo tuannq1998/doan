@@ -8,17 +8,17 @@
                 </header>
                 <div class="panel-body">
                     <div class="position-center">
-                        <form role="form" action="{{ route('category.product.update', $category->id) }}" enctype="multipart/form-data" method="POST">
+                        <form role="form" action="{{ route('product.update', $product->id) }}" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Name</label>
-                                <input type="text" class="form-control"  name="name" id="name" value="{{$category->name}}">
+                                <label for="exampleInputEmail1">Product name</label>
+                                <input type="text" class="form-control"  name="name" id="name" value="{{$product->name}}">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Description</label>
-                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="description" id="description">{{$category->description}}</textarea>
+                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="description" id="description">{{$product->description}}</textarea>
                             </div>
-                            <button type="submit" name="update_category_product" class="btn btn-info">Update</button>
+                            <button type="submit" name="update_product" class="btn btn-info">Update</button>
                         </form>
                     </div>
 
