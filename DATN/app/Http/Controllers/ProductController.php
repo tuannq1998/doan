@@ -40,7 +40,7 @@ class ProductController extends Controller
             'name' => $request->name,
             'title' => $request->title,
             'price' => $request->price,
-            'image'=>$file['name'],
+            'image' => $file['name'],
             'content' => $request->content,
             'category_id' => $request->category,
             'brand_id' => $request->brand,
