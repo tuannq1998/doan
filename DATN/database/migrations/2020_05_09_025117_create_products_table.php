@@ -18,10 +18,11 @@ class CreateProductsTable extends Migration
             $table->bigInteger('category_id');
             $table->bigInteger('brand_id');
             $table->string('name');
+            $table->string('slug');
             $table->string('title')->nullable();
             $table->string('image')->nullable();
             $table->string('price');
-            $table->text('content')->nullable();
+            $table->text('contents')->nullable();
             $table->text('description')->nullable();
             $table->tinyInteger('hot')->nullable();
             $table->tinyInteger('view')->nullable();

@@ -30,15 +30,17 @@
                 <table class="table table-striped b-t b-light">
                     <thead>
                     <tr>
-                        <th style="width:20px;">
+                        <td style="width:20px;">
                             <label class="i-checks m-b-none">
                                 <input type="checkbox"><i></i>
                             </label>
-                        </th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Status</th>
-                        <th style="width:30px;"></th>
+                        </td>
+                        <td></td>
+                        <td>Name</td>
+                        <td>Product Category </td>
+                        <td>Product brand </td>
+                        <td>Status</td>
+                        <td style="width:40px;"></td>
                     </tr>
                     </thead>
                     <tbody>
@@ -46,8 +48,10 @@
                         @foreach($products as $product)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
+                                <td><img style="width: 50px" src="{{ asset('') }}/{{ pare_url_file($product->image) }}" alt=""></td>
                                 <td>{{$product->name}}</td>
-                                <td>{{$product->description}}</td>
+                                <td>{{isset($product->category->name)?$product->category->name : 'N\A'}}</td>
+                                <td>{{isset($product->brand->name)?$product->brand->name : 'N\A'}}</td>
                                 <td>
                                     @if($product->c_status == \App\Models\Product::STATUS_SHOWS)
                                         <a href="{{route('product.status',$product->id )}}" class="label {{$product->getStatus($product->status)['class']}}">{{$product->getStatus($product->status)['name']}}</a>

@@ -20,7 +20,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Price</label>
-                                <input type="number" class="form-control" name="price" placeholder="Product name">
+                                <input type="number" class="form-control" name="price" placeholder="Product price">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Image</label>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Content</label>
-                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="content"
+                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="contents"
                                           placeholder="Product content"></textarea>
                             </div>
                             <div class="form-group">
