@@ -4,7 +4,7 @@
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Update product catalog
+                    Update brand catalog
                 </header>
                 <div class="panel-body">
                     <div class="position-center">
@@ -15,8 +15,8 @@
                                 <input type="text" class="form-control"  name="name" id="name" value="{{$brand->name}}">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Descripsion</label>
-                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="descripsion" id="descripsion">{{$brand->descripsion}}</textarea>
+                                <label for="exampleInputPassword1">Description</label>
+                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="description" id="description">{{$brand->description}}</textarea>
                             </div>
                             <button type="submit" name="update_brand" class="btn btn-info">Update</button>
                         </form>

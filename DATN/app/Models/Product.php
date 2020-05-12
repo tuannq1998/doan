@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
-class Category extends Model
+class Product extends Model
 {
-    protected $table = 'categories';
-    protected $fillable = ['name','description','status'];
+    protected $table = 'products';
+    protected $fillable = ['name','slug','title','contents','price','image','description','category_id','brand_id','hot','view','status'];
     const STATUS_SHOWS = 1;
     const  STATUS_HIDE = 0;
     protected $c_status = [
@@ -24,5 +24,11 @@ class Category extends Model
     public function getStatus()
     {
         return Arr::get($this->c_status,$this->status, '[N\A]');
+    }
+    public function category(){
+        return $this->belongsTo(Category::class,'category_id');
+    }
+    public function brand(){
+        return $this->belongsTo(Brand::class,'brand_id');
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Support\Arr;
 class Brand extends Model
 {
     protected $table = 'brands';
-    protected $fillable = ['name','descripsion','status'];
+    protected $fillable = ['name','description','status'];
     const STATUS_SHOWS = 1;
     const  STATUS_HIDE = 0;
     protected $c_status = [

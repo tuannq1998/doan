@@ -15,8 +15,8 @@
                                 <input type="text" class="form-control"  name="name" id="name" value="{{$category->name}}">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Descripsion</label>
-                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="descripsion" id="descripsion">{{$category->descripsion}}</textarea>
+                                <label for="exampleInputPassword1">Description</label>
+                                <textarea type="text" style="resize: none" rows="5" class="form-control" name="description" id="description">{{$category->description}}</textarea>
                             </div>
                             <button type="submit" name="update_category_product" class="btn btn-info">Update</button>
                         </form>
